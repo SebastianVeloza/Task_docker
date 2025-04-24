@@ -5,7 +5,7 @@ Este repositorio contiene una aplicación fullstack de ejemplo para el registro 
 - 💻 **Frontend:** React 18
 - 🔧 **Backend:** Node.js + Express
 - 🐬 **Base de datos:** MySQL 8
-- 🐳 **Contenedores Docker** separados (sin Docker Compose)
+- 🐳 **Contenedores Docker** separados 
 
 ---
 
