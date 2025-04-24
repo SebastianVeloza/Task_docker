@@ -6,12 +6,12 @@ export default function App() {
   const [descripcion, setDescripcion] = useState('');
 
   const obtenerTareas = async () => {
-    const { data } = await axios.get('http://localhost:3001/tareas');
+    const { data } = await axios.get('http://backend:3001/tareas');
     setTareas(data);
   };
 
   const agregarTarea = async () => {
-    await axios.post('http://localhost:3001/tareas', { descripcion });
+    await axios.post('http://backend:3001/tareas', { descripcion });
     setDescripcion('');
     obtenerTareas();
   };
