@@ -16,6 +16,11 @@ Este repositorio contiene una aplicación fullstack de ejemplo para el registro 
 - Node.js (solo si deseas probar localmente sin Docker)
 
 ---
+## 🐳 con Docker-Compose
+
+```
+docker compose up -d
+```
 
 ## 🐳 Preparación con Docker
 
