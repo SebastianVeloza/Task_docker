@@ -16,11 +16,7 @@ Este repositorio contiene una aplicación fullstack de ejemplo para el registro 
 - Node.js (solo si deseas probar localmente sin Docker)
 
 ---
-## 🐳 con Docker-Compose
 
-```
-docker compose up -d
-```
 
 ## 🐳 Preparación con Docker
 
@@ -62,6 +58,12 @@ docker run -d --name backend_tareas --network red_tareas -p 3001:3001 backend-ta
 cd frontend
 docker build -t frontend-tareas .
 docker run -d --name frontend_tareas --network red_tareas -p 3000:3000 frontend-tareas
+```
+
+## 🐳 Con Docker-Compose
+
+```
+docker compose up -d
 ```
 ###  Uso
 Accede a http://localhost:3000
