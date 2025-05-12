@@ -65,6 +65,10 @@ docker run -d --name frontend_tareas --network red_tareas -p 3000:3000 frontend-
 ```
 docker compose up -d
 ```
+para bajar los contenedores
+```
+docker compose down
+```
 ###  Uso
 Accede a http://localhost:3000
 
