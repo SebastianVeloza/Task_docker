@@ -1,0 +1,43 @@
+services:
+  mysql_tareas:
+    image: mysql:8
+    container_name: mysql_tareas
+    restart: always
+    networks:
+      - red_tareas
+    volumes:
+      - volumen_mysql_tareas:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: admin123
+      MYSQL_DATABASE: tareas
+    ports:
+      - "3307:3306"
+
+  backend_tareas:
+    image: sebastianveloza/backend-tareas:latest
+    container_name: backend_tareas_2
+    restart: always
+    networks:
+      - red_tareas
+    ports:
+      - "3001:3001"
+    depends_on:
+      - mysql_tareas
+
+  frontend_tareas:
+    image: sebastianveloza/frontend-tareas:latest
+    container_name: frontend_tareas_2
+    restart: always
+    networks:
+      - red_tareas
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend_tareas
+
+volumes:
+  volumen_mysql_tareas:
+
+networks:
+  red_tareas:
+    driver: bridge
