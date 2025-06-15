@@ -1,0 +1,10 @@
+# Archivos y carpetas de IDE
+.idea/
+.vscode/
+
+# Archivos y carpetas de Terraform
+.terraform/
+.terraforms/
+.terraform.lock.hcl
+terraform.tfstate
+terraform.tfstate.backup
